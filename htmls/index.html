@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow">
+		<link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/3.0.0/handsontable.full.min.css" />
+		<title>さいばぁすぺぇす</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="./viewer.js"></script>
+	</head>
+
+	<body>
+	<div id ="bkgd">
+        <div id="header-fixed">
+          <div id="header-bk">
+            <div id="headermain">
+              <table width="100%"><tr>
+                  <td align="left" width="200"><img src="./data/title.png" class="undraggable" height="50px"></td>
+              </tr></table>
+            </div>
+          </div>
+          <div id="header-bd"></div>
+        </div>
+        <div id="body-bk">
+        	<div id="bodystart">
+            	<br>
+            </div>
+               
+            <div id="bodymain">
+<div id="header">
+  <h3>対戦型クトゥルフ神話TRPG「さいばぁすぺぇす」用キャラシート作成ツール</h3>
+</div>
+<div id="status">
+  <h2>能力値</h2>
+  <p>
+    探索者の能力値(STR CON POW DEX APP INT EDU)は公平を期すために、ダイスロールではなくPLが自ら自由に割り振る。ルールは以下の通り。
+    <ul>
+    <li>合計値が100になること</li>
+    <li>各値の下限、上限は守ること</li>
+    </ul>
+    なお、幸運はAPP×5とする。
+  </p>
+  <div class="ctrText">合計:<span id="status-sum"></span>/100</div>
+  <form id="statusform" style="margin:0px" action='#'>
+  <table  width="100%" class="st">
+  <tr>
+    <th class="st"><span class="sm">3-18<br></span>STR</th>
+    <th class="st"><span class="sm">3-18<br></span>CON</th>
+    <th class="st"><span class="sm">3-18<br></span>POW</th>
+    <th class="st"><span class="sm">3-18<br></span>DEX</th>
+    <th class="st"><span class="sm">3-18<br></span>APP</th>  
+    <th class="st"><span class="sm">8-18<br></span>SIZ</th>
+    <th class="st"><span class="sm">8-18<br></span>INT</th>
+    <th class="st"><span class="sm">6-21<br></span>EDU</th>
+  </tr>
+  <tr>
+    <td class="st"><input type="number" name="str" value=3></td>
+    <td class="st"><input type="number" name="con" value=3></td>
+    <td class="st"><input type="number" name="pow" value=3></td>
+    <td class="st"><input type="number" name="dex" value=3></td>
+    <td class="st"><input type="number" name="app" value=3></td>
+    <td class="st"><input type="number" name="siz" value=8></td>
+    <td class="st"><input type="number" name="int" value=8></td>
+    <td class="st"><input type="number" name="edu" value=6></td>
+  </tr>
+  </table>
+  </form>
+  <script type="text/javascript">
+    $('#statusform').change(calcStatus);
+  </script>
+
+  <table width="100%" class="st">
+  <tr>
+    <th class="st">HP</th>
+    <th class="st">MP</th>
+    <th class="st">SAN</th>
+    <th class="st">アイデア</th>
+    <th class="st">幸運</th>
+    <th class="st">知識</th>
+    <th class="st">DB</th>
+    <th class="st">技能P</th>
+  </tr>
+  <tr id="table2">
+  </tr>
+  </table>
+</div>
+<hr>
+<div id="ult">
+  <h2>究極技能</h2>
+  <p>
+    探索者は以下の中からひとつだけ究極技能(アルティメットスキル)を習得できる。ただし能力値が条件を満たしていること。
+  </p>
+  <h4 class="subtitle">天性のステルス</h4>
+  <div class="subtext">
+    <span class="colText">条件: SIZ+STRが12以下</span><br>
+    パッシブ: 隠れる・忍び歩き・隠すの上限が80になる。<br>
+    アクティブ: 成功率60% 隠れる・忍び歩き・隠すに失敗した時、この技能に成功すればその行動は成功になる。
+  </div>
+  <h4 class="subtitle">冒涜的な悪食</h4>
+  <div class="subtext">
+    <span class="colText">条件: CONが18</span><br>
+    成功率60%<br>
+    この技能に成功するとどんなものでも飲み込むことができる。消化するか保存するかは自分の意思で決定できる。<br>
+    失敗すると腹痛に見舞われる。<br>
+    死亡時、体内に残っていたものはその場に撒き散らされる。
+  </div>
+  <h4 class="subtitle">テレポーテーション</h4>
+  <div class="subtext">
+    <span class="colText">条件: POWが18</span><br>
+    成功率60%<br>
+    この技能に成功すると、瞬時に任意の場所へ移動できる。<br>
+    詠唱や移動の瞬間は隠れるなどの技能を使わずとも見つかることはない。<br>
+    失敗時死亡。
+  </div>
+  <h4 class="subtitle">狂気の波動</h4>
+  <div class="subtext">
+    <span class="colText">条件: POWが6以下、INTが15以上</span><br>
+    成功率60%<br>
+    この技能に成功すると、一定時間範囲内の全てのキャラクターが行動不能になる。ただし聞き耳・目星は可能。<br>
+    失敗時死亡。
+  </div>
+  <h4 class="subtitle">名状しがたい美容技術のようなもの</h4>
+  <div class="subtext">
+    <span class="colText">条件: APPが18</span><br>
+    成功率60%<br>
+    この技能は以下の行動として振れる。<br>
+    <li>アイテムなどの複製</li>
+    <li>NPCに対する交渉技能</li>
+    失敗時死亡。
+  </div>
+  <h4 class="subtitle">エネルギー受信</h4>
+  <div class="subtext">
+    <span class="colText">条件: POW+INTが30以上</span><br>
+    成功率65%<br>
+    対象がPC: 最後の隠しチャットを閲覧できる。<br>
+    対象が非PC: 罠などを看破できる。<br>
+    失敗時死亡。
+  </div>
+</div>
+<hr>
+<div id="skill">
+  <h2>技能</h2>
+  <p>
+    基本は本家クトゥルフ神話TRPGに準ずるが、以下の点で相違がある。
+    <ul>
+    <li>職業P、興味Pの区別は無く、技能ポイントINT*10+EDU*20を自由な技能に割り振る。</li>
+    <li>上限値は全て70</li>
+    <li>隠れるを除いて初期値は本家通り（隠れるは初期値60）</li>
+    </ul>
+  </p>
+  以下工事中<br>
+  <div class="ctrText">技能P: <span id="usedSkillP">0</span> / <span id="skillP">0</span></div>
+  <div id="skill1"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/3.0.0/handsontable.full.min.js"></script>
+  <script src="./test/test.js"></script>
+</div>
+
+          	
+
+
+</div><!--//////KOKOMADE///////-->
+		</div>
+
+		<div id="bodysub">
+		</div>
+
+	</div>
+
+	</div>
+  <style type="text/css">
+    h1{
+      padding: 0 45px;
+    }
+
+    hr {
+      color: #ffffff;
+    }
+    .box19 {
+        padding:0.25em 2em;
+        margin-bottom: 20px;
+    }
+
+  </style>
+    </body>
+</html>

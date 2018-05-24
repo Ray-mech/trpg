@@ -1,0 +1,81 @@
+#status {
+	width:800px;
+}
+
+
+table.st {
+	font-size: 20px;
+	margin: 5px;
+	border-collapse: separate;
+	border-spacing: 1px 1px;
+}
+
+th.st {
+	color: #ffffff;
+	text-align: center;
+	background-color: #535353;
+	line-height: 110%;
+}
+td.st {
+	vertical-align: middle;
+	text-align: center;
+	background-color: #dddddd;
+}
+th.st,td.st {
+	width: 100px;
+}
+
+table.sk {
+	font-size: 16px;
+	margin: 5px;
+}
+table.sk th{
+	color: #ffffff;
+	text-align: center;
+	background-color: #535353;
+	line-height: 110%;
+}
+table.sk td{
+	vertical-align: middle;
+	text-align: center;
+	background-color: #dddddd;
+}
+
+input {
+	width:50%;
+	font-size: 25px;
+	text-align: center;
+	background-color: #eeeeee;
+}
+
+.sm {
+	font-size: 12px;
+}
+
+.subtext {
+	margin-left: 20px;
+}
+.colText{
+	color: #341184;
+}
+
+.ctrText{
+	color: #341184;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h2 {
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+	color: #222222;/*文字色*/
+	background: transparent;/*背景透明に*/
+	border-left: solid 5px #6441a4;/*左線*/
+}
+h3 {
+	border-bottom: solid 3px #6441a4;
+}
+h4.subtitle {
+	margin-bottom: 0px;
+	border-bottom: solid 1px #6441a4;
+}
+
