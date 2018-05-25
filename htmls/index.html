@@ -18,6 +18,7 @@
             <div id="headermain">
               <table width="100%"><tr>
                   <td align="left" width="200"><img src="./data/title.png" class="undraggable" height="50px"></td>
+                  <td align="right"><a id="download" class="floatctrl" href="#" download="cs.txt" onclick="saveCs()">ダウンロード</a></td>
               </tr></table>
             </div>
           </div>
@@ -32,6 +33,14 @@
 <div id="header">
   <h3>対戦型クトゥルフ神話TRPG「さいばぁすぺぇす」用キャラシート作成ツール</h3>
 </div>
+<div id="basic">
+  <h2>基本情報</h2>
+  <form id="nameform" style="margin:0px">
+    名前　<input type="text" name="nameinput" value="" style="text-align:left;"><br><br>
+    詳細　<input type="text" name="detlinput" value="" style="font-size:10px; text-align:left;"><br>
+  </form>
+</div>
+<hr>  
 <div id="status">
   <h2>能力値</h2>
   <p>
@@ -43,7 +52,7 @@
     なお、幸運はAPP×5とする。
   </p>
   <div class="ctrText">合計:<span id="status-sum"></span>/100</div>
-  <form id="statusform" style="margin:0px" action='#'>
+  <form id="statusform" style="margin:0px">
   <table  width="100%" class="st">
   <tr>
     <th class="st"><span class="sm">3-18<br></span>STR</th>
@@ -92,6 +101,16 @@
   <p>
     探索者は以下の中からひとつだけ究極技能(アルティメットスキル)を習得できる。ただし能力値が条件を満たしていること。
   </p>
+  <div id="ultdiv">
+    <form id="ultform" style="margin:0px">
+      <input type="radio" class="ult" name="ultradio" value=1>天性のステルス<br>
+      <input type="radio" class="ult" name="ultradio" value=2>冒涜的な悪食<br>
+      <input type="radio" class="ult" name="ultradio" value=3>テレポーテーション<br>
+      <input type="radio" class="ult" name="ultradio" value=4>狂気の波動<br>
+      <input type="radio" class="ult" name="ultradio" value=5>名状しがたい美容技術のようなもの<br>
+      <input type="radio" class="ult" name="ultradio" value=6>エネルギー受信
+    </form>
+  </div>
   <h4 class="subtitle">天性のステルス</h4>
   <div class="subtext">
     <span class="colText">条件: SIZ+STRが12以下</span><br>
@@ -150,12 +169,14 @@
     <li>隠れるを除いて初期値は本家通り（隠れるは初期値60）</li>
     </ul>
   </p>
-  以下工事中<br>
+
   <div class="ctrText">技能P: <span id="usedSkillP">0</span> / <span id="skillP">0</span></div>
   <div id="skill1"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/3.0.0/handsontable.full.min.js"></script>
   <script src="./test/test.js"></script>
 </div>
+
+
 
           	
 

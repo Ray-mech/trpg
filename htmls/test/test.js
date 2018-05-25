@@ -1,3 +1,4 @@
+/*
 function checkSkillSum(data){
 	var usedSkill = 0;
 	for (i = 0; i < data.length; i++){
@@ -8,7 +9,7 @@ function checkSkillSum(data){
 }
 
 
-$().ready(function() {
+function setCells(){
 // 表示する値
 var data = [
     ["応急手当", 30, 0, 30],
@@ -59,7 +60,6 @@ checkSkillSum(data);
 // handsontableの作成
 var $container = $('#skill1');
 $container.handsontable({
-    /* オプション */
     // 表示データ
     data: data,
     // 列ヘッダー
@@ -88,5 +88,9 @@ $container.handsontable({
 	    return cellProperties;
 	}
 });
+}
 
+$().ready(function() {
+  return setCells();
 });
+*/

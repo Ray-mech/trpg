@@ -47,6 +47,11 @@ input {
 	text-align: center;
 	background-color: #eeeeee;
 }
+input.ult {
+	width:auto;
+	font-size: 25px;
+	text-align: left;
+}
 
 .sm {
 	font-size: 12px;
