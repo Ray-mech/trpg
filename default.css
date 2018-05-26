@@ -1,0 +1,204 @@
+html , body {
+margin: 0px;
+}
+
+#wrapper {
+height: 100%;
+}
+
+
+/* ヘッダーの固定 */
+    div#header-fixed {
+        position: fixed;            /* ヘッダーの固定 */
+        top: 0px;                   /* 位置(上0px) */
+        left: 0px;                  /* 位置(右0px) */
+        width: 100%;                /* 横幅100%　*/
+        height: 70px;              /* 縦幅 */
+    }
+     
+    div#header-bk { 
+    	background-color:#282828;     /* 背景色(黒) */
+    	padding:10px 0 20px;       /* 上10px、下20pxをあける */
+    	height:36px;              /* 縦の高さ110px */
+    	width:100%;                /* 横の幅を100% */
+    }
+    div#header-bd { 
+        background-color:#6441a4;     /* 背景色(黒) */
+        height:4px;              /* 縦の高さ110px */
+        width:100%;                /* 横の幅を100% */
+        
+    }
+
+    div#headermain{
+        width:98%;
+        margin:auto;
+    }
+    
+    .headerlink {
+        font-family: "Impact","MS Sans Serif";
+        font-size: 20px;
+        color:white;
+        background:#333333;
+        padding:1px 10px;/*内側の余白*/
+        border-radius: 3px;/*角を丸くする*/
+        text-decoration:none;
+     }
+     .headerlink:hover {
+        background: silver;
+     }
+
+     .floatctrl {
+        font-family: "Impact","MS Sans Serif";
+        font-size: 20px;
+        color:white;
+        background:#333333;
+        padding:1px 10px;/*内側の余白*/
+        border-radius: 3px;/*角を丸くする*/
+        text-decoration:none;
+     }
+     .floatctrl:hover {
+        background: silver;
+     }
+     
+    /* 
+    div#header { 
+    	border: 5px solid #fff;    // 表示領域を白枠で囲う
+    	height: 100%;              // 縦の表示領域はheader-bkと同じ
+    	width: 960px;              //横の幅970px
+    	margin: auto;              //中央揃え
+    }
+    */
+    
+    div#rightfloat {
+        position: fixed;            /* ヘッダーの固定 */
+        top: 70px;                   /* 位置(上0px) */
+        right: 0px;                  /* 位置(右0px) */
+        width: 260px;                /* 横幅100%　*/
+        height: 98% ; /* IE8以下とAndroid4.3以下用フォールバック */
+        height: -webkit-calc(100% - 75px) ;
+        height: calc(100% - 75px) ;
+        background-color: white;
+             /* 縦幅 */
+    }
+    div#leftfloat {
+        position: fixed;            /* ヘッダーの固定 */
+        top: 70px;                   /* 位置(上0px) */
+        left: 0px;                  /* 位置(右0px) */
+        width: 260px;                /* 横幅100%　*/
+        height: 100%;
+        background-color: white;
+             /* 縦幅 */
+    }
+
+/* ボディの定義 */
+    div#bkgd{
+        background: url(./data/background.jpg);
+
+    }
+
+    div#body-bk{
+        padding:70px 0 0px 0;    /* 上に余白を取る */
+    }
+     
+    div#bodystart{
+        width:100%;
+        margin:auto;
+    }
+    
+    div#bodymain{
+        width:1220px;
+        margin:auto;
+    }
+    
+    div#bodysub{
+        width:1220px;
+        margin:auto;
+    }
+    iframe#cFrame{
+        height: 98% ; /* IE8以下とAndroid4.3以下用フォールバック */
+        height: -webkit-calc(100% - 110px) ;
+        height: calc(100% - 110px) ;
+    }
+    
+/* プレイヤー */
+    div#player{
+        display: inline-block;
+        width:  864px;
+        height: 486px;
+        color: black;
+        background: url("./ts/offlineimage.jpg");
+    }
+    
+    div#chat{
+        display: inline-block;
+    }
+    
+    div#subject{
+        background-color: #EEEEEE;
+        /*border: 3px solid #333333;*/
+    }
+
+
+    div#viewcounter{
+       float:right;
+       font-size:10px;
+       padding:8px;
+       margin-right: 10px;
+       margin-left: auto;
+    }
+    .realtimeuserscounter{
+        text-align : center;
+    }
+    .realtimeuserscounter__num{
+        font-size:20px;
+    }
+    .realtimeuserscounter__attr{
+        font-size:0px;
+    }
+
+/* ボタン */
+    .square_btn{
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: #6441a4;
+        background: #EEEEEE;
+        transition: .4s;
+    }
+
+    .square_btn:hover {
+        background: #6441a4;
+        color: white;
+    }
+
+    .square_btn2{
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        font-size:35px;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: #ffffff;
+        background: #6441a4;
+        transition: .2s;
+    }
+
+    .square_btn2:hover {
+        background: #503295;
+        color: white;
+    }
+
+
+    .undraggable {
+    /* For Opera and <= IE9, we need to add unselectable="on" attribute onto each element */
+    /* Check this site for more details: http://help.dottoro.com/lhwdpnva.php */
+    -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
