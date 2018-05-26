@@ -16,7 +16,7 @@ function setData(textfile){
     var status = data_array[2].split(',');
     setTable(status,"#statusTable");
     var skill = data_array[4].split(',');
-    setTable(skill,"#skillTable");
+    setTablecolor(skill,"#skillTable");
 }
 
 function setName(pcname,pcdetl,ultname){
@@ -33,6 +33,16 @@ function setTable(status,place){
 		wak += "</td>\n";
 	}
 	$(place).html(wak);
+}
+function setTablecolor(status,place){
+    var wak = "";
+    for (i = 0; i < status.length; i++) {
+        var col = Number(status[i]);
+        wak += "<td class='st' style='background-color: hsl(270," + col + "%, 70%);'>";
+        wak += status[i];
+        wak += "</td>\n";
+    }
+    $(place).html(wak);
 }
 
 
