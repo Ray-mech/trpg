@@ -41,6 +41,13 @@ table.sk td{
 	background-color: #dddddd;
 }
 
+tr.smalltable{
+	font-size:12px;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	background-color: #cdcdee;
+}
+
 input {
 	width:50%;
 	font-size: 25px;

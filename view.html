@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="robots" content="noindex,nofollow">
+		<link rel="stylesheet" href="./default.css">
+    	<link rel="stylesheet" href="./style.css">
+		<title>さいばぁすぺぇすCS</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    	<script type="text/javascript" src="./show.js"></script>
+	</head>
+
+	<body>
+		<div id ="bkgd">
+			<form name="test" style="margin:0px;">
+				<input type="file" id="selfile" style="font-size: 13px;">
+			</form>
+			<script type="text/javascript">
+				obj1 = document.getElementById("selfile");
+				obj1.addEventListener("change",function(evt){
+				  var file = evt.target.files;
+				  var reader = new FileReader();
+				  reader.readAsText(file[0]);
+				  //読込終了後の処理
+				  reader.onload = function(ev){
+				    setData(reader.result);
+				  }
+				},false);
+			</script>
+				<div id="bodymain">
+					<h3><span id="pcname">キャラクター名</span></h3>
+					<p><span id="pcdetl" style="font-size:10px;">キャラクター詳細</span></p>
+					<table  width="100%" class="st">
+						<tr>
+							<th class="st">STR</th>
+							<th class="st">CON</th>
+							<th class="st">POW</th>
+							<th class="st">DEX</th>
+							<th class="st">APP</th>  
+							<th class="st">SIZ</th>
+							<th class="st">INT</th>
+							<th class="st">EDU</th>
+							<th class="st">HP</th>
+							<th class="st">MP</th>
+							<th class="st">SAN</th>
+							<th class="st">IDEA</th>
+							<th class="st">幸運</th>
+							<th class="st">知識</th>
+							<th class="st">DB</th>
+							<th class="st">技能P</th>
+						</tr>
+						<tr id="statusTable"></tr>
+					</table>
+					<h4>特殊技能: <span id="ultname"></span></h4>
+
+					<table  width="100%" class="st">
+						<tr class="smalltable">
+							<th>応急手当</th>
+							<th>鍵開け</th>
+							<th>隠す</th>
+							<th>隠れる</th>
+							<th>写真術</th>
+							<th>変装</th>
+							<th>機械修理</th>
+							<th>電気修理</th>
+							<th>運転</th>
+							<th>重機械操</th>
+							<th>コンピュータ</th>
+							<th>追跡</th>
+							<th>登攀</th>
+							<th>忍び歩き</th>
+							<th>乗馬</th>
+							<th>水泳</th>
+							<th>跳躍</th>
+							<th>経理</th>
+							<th>目星</th>
+							<th>聞き耳</th>
+							<th>ナビゲート</th>
+							<th>言いくるめ</th>
+							<th>信用</th>
+							<th>説得</th>
+							<th>値切り</th>
+							<th>オカルト</th>
+							<th>精神分析</th>
+							<th>図書館</th>
+							<th>医学</th>
+							<th>化学</th>
+							<th>考古学</th>
+							<th>人類学</th>
+							<th>生物学</th>
+							<th>地質学</th>
+							<th>電子工学</th>
+							<th>天文学</th>
+							<th>博物学</th>
+							<th>物理学</th>
+							<th>薬学</th>
+							<th>心理学</th>
+							<th>法律</th>
+							<th>歴史</th>
+						</tr>
+						<tr id="skillTable"></tr>
+					</table>
+					<br>
+
+				</div>
+			
+		</div>
+	</body>
+</html>

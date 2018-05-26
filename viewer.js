@@ -72,7 +72,7 @@ function calcStatus(){
 	else {db="+1d6";}
 	var skill = int*10 + edu*20;
 	var statusArr2 =[hp, mp, san, idea, luck, know, db, skill];
-	statusArray = statusArr1 + statusArr2;
+	statusArray = statusArr1 +","+ statusArr2;
 
 	var wak = "";
 	for (i = 0; i < statusArr2.length; i++) {
