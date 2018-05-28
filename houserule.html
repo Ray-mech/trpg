@@ -5,9 +5,9 @@
 	<title></title>
 </head>
 <body>
-	<h1>ゼロ卓 ハウスルール</h1>
+	<div id="maincontent"><img src="./data/title_rule.jpg" class="undraggable" height="50px">
 
-	<h3>ダイスロール</h3>
+	<h2>ダイスロール</h2>
 
 	<h4>技能（1D100）</h4>
 	<table>
@@ -33,7 +33,7 @@
 	</div>
 
 	<h4>戦闘</h4>
-	攻撃時<br>
+	<h5>攻撃時</h5>
 	<div class="box1">
 		クリティカル： 装甲を持つ相手に対しては装甲無視。持たない相手にはダメージ2倍。<br>
 		ファンブル： 1D6を振り、以下の表の事象が起こる。<br>
@@ -55,19 +55,48 @@
 	現在耐久度(HP)の半分以上のダメージを一度に受けた場合、CON×5のショックロールを行う。これに失敗した場合は気絶する。耐久度が2以下になればロールを行わずに自動的に気絶する。
 
 
+	</div>
+
 <style type="text/css">
+	body{
+		background-color: gray;
+	}
+	#maincontent{
+		margin: auto;
+		width: 1220px;
+		background-color: white;
+		padding: 20px;
+	}
 	table,td,th{
-		border: 1px #bbbbff solid;
+		border: 1px #edd3ff solid;
 		background-color: white;
 	}
 	th{
-		background-color: #aaaadd;
+		background-color: #bda3dd;
 	}
 	div.box1{
 		margin-left:10px;
 		padding: 8px;
 		border-radius: 10px;
-		background-color: #ddddff;
+		background-color: #f1ddff;
+	}
+	h2 {
+		padding: 0.5em;/*文字周りの余白*/
+		color: #010101;/*文字色*/
+		background: #edd3ff;/*背景色*/
+		border-bottom: solid 3px #a12ab6;/*下線*/
+	}
+	h4{
+		position: relative;
+		padding: 0.25em 0;
+	}
+	h4:after {
+		content: "";
+		display: block;
+		height: 4px;
+		background: -moz-linear-gradient(to right, rgb(180, 90, 230), transparent);
+		background: -webkit-linear-gradient(to right, rgb(180, 90, 230), transparent);
+		background: linear-gradient(to right, rgb(180, 90, 230), transparent);
 	}
 </style>
 </body>
