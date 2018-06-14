@@ -1,26 +1,78 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-	<title>どどんとふ-ゼロ鯖 How2</title>
-	<meta http-equiv="content-type" charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>どどんとふ-ゼロ鯖 Guideline</title>
+
 	<style type="text/css">
+		html, body {
+		  width: 100%;
+		  height: 100%;
+		  margin: 0;
+		  padding: 0;
+		}
+		html {
+		  display: table;
+		}
+		body {
+		  display: table-cell;
+		  text-align: left;
+		  vertical-align: middle;
+		  background: url(/webdata/bg1.jpg) center center / cover no-repeat fixed;
+		}
 		#maincontent {
+			border-radius: 10px;
+			color: black;
 			width: 60%;
 			margin: 0 auto;
+			padding:10px;
+			background-color: rgba(255,255,255,0.7);
+		}
+		ul {
+		  border: solid 2px black;
+		  padding: 0 0.5em;
+		  position: relative;
+		}
+
+		ul li {
+		  line-height: 1.5;
+		  padding: 0.5em 0 0.5em 1.4em;
+		  border-bottom: dashed 1px silver;
+		  list-style-type: none!important;
+		}
+
+		ul li:before {
+		  font-family: FontAwesome;
+		  content: "\f138";/*アイコン種類*/
+		  position: absolute;
+		  left : 0.5em; /*左端からのアイコンまで*/
+		  color: black; /*アイコン色*/
+		}
+
+		ul li:last-of-type{
+		  border-bottom: none;
 		}
 	</style>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+
 	<div id="maincontent">
-		<h2>どどんとふゼロ鯖のおすすめの使い方(CoC)</h2>
-		<p>ゼロ鯖では、以下の使い方を推奨します。</p>
-		<ol>
-			<li>以下のファイルをダウンロードし、ルーム作成後にこれをロードする。（クリティカル/ファンブルのカットイン設定です）<br><a href="#">TofData_ver1.0.sav</a></li>
-			<li>ダイスボットは「クトゥルフ-ゼロ卓」を選択する。</li>
-			<li>ダイスを振るときは「1D100<=数値」ではなく「CCB<=数値」を使うと、クリティカル/ファンブル(5%ずつ)の判定が出ます。<br>
-				チャットパレットもCCBを使うことを推奨します。（1および100のみのC/F判定は「CC<=数値」で振れます。）</li>
-			<li>狂気ロール(1D10)は、一時的狂気:「insane]／不定の狂気:「indef」で振れます。</li>
-		</ol>
+		<h2>どどんとふゼロ鯖 ガイドライン</h2>
+		<p>本サーバーは以下のガイドラインに沿って利用してください。</p>
+		<ul>
+			<li>本サーバーの利用はOGCメンバーに限ります。ただし、OGCメンバーを含むセッションでの利用は認めます。</li>
+			<li>申請により、恒久的な個人のルームをもつことができます。</li>
+			<li>個人のルーム以外のルームは、使われていないと判断された場合削除される場合があります。</li>
+			<li>予告無くサーバーをシャットダウンする場合があります。セッション前に連絡をいただけるとセッション中のダウンは回避します。</li>
+			<li>画像などのファイルは削除する必要はありません。</li>
+		</ul>
 	</div>
+	<script>
+		'use strict';
+		document.getElementById('dldata').download = 'TofSavefile_ver1.0.sav';
+	</script>
+
 </body>
 </html>
